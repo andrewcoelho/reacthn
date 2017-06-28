@@ -1,0 +1,137 @@
+{
+  "name": "react-hn",
+  "version": "1.0.0",
+  "description": "React Hacker News reader",
+  "scripts": {
+    "dev": "NODE_ENV=development node devServer.js",
+    "build": "NODE_ENV=production webpack -p",
+    "start": "serve ./build/",
+    "test": "jest --coverage",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewcoelho/react-hn"
+  },
+  "homepage": "https://github.com/andrewcoelho/react-hn#readme",
+  "main": "index.js",
+  "author": "Andrew Coelho <info@andrewcoelho.com> (http://andrewcoelho.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "6.22.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "6.22.0",
+    "babel-register": "6.22.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.1",
+    "eslint-plugin-import": "2.5.0",
+    "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-react": "7.0.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "html-webpack-plugin": "^2.29.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.4",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "react-test-renderer": "^15.6.1",
+    "style-ext-html-webpack-plugin": "^3.4.1",
+    "style-loader": "^0.18.2",
+    "stylelint": "^7.12.0",
+    "stylelint-config-css-modules": "^1.0.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-webpack-plugin": "^0.7.1",
+    "sw-precache-webpack-plugin": "^0.11.3",
+    "webpack": "3.0.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-config-utils": "^2.3.0",
+    "webpack-dev-server": "2.4.5"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-hot-loader": "3.0.0-beta.7",
+    "react-timeago": "3.1.0",
+    "react-waypoint": "^7.0.4",
+    "serve": "^6.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          }
+        }
+      ],
+      "react"
+    ],
+    "plugins": [
+      "react-hot-loader/babel",
+      "transform-class-properties",
+      "transform-export-extensions",
+      "transform-object-rest-spread"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "rules": {
+      "arrow-parens": [
+        2,
+        "as-needed",
+        {
+          "requireForBlockBody": false
+        }
+      ],
+      "comma-dangle": [
+        2,
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "never"
+        }
+      ],
+      "global-require": 0,
+      "import/extensions": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-unresolved": 0,
+      "max-len": [
+        2,
+        {
+          "code": 80,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreTrailingComments": true,
+          "ignoreUrls": true
+        }
+      ],
+      "no-underscore-dangle": 0,
+      "react/jsx-filename-extension": 0,
+      "react/no-did-mount-set-state": 0
+    }
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules", "src"
+    ],
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    }
+  }
+}

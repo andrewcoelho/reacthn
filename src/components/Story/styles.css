@@ -1,0 +1,22 @@
+.story {
+  padding: 1rem 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e9ecef;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.meta {
+  color: #343a40;
+  font-size: 0.8rem;
+}
+
+.author {
+  font-weight: 500;
+}
